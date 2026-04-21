@@ -1,0 +1,67 @@
+{% include 'admin_header.html' %}
+
+<!-- Main Section -->
+<div class="container main-section">
+    <div class="row">
+
+        <!-- Left Content -->
+        <div class="col-md-8">
+            <div class="welcome-box">
+                <h2>Employee Data.</h2>
+<form action="/admin_emp_update" method="post">
+    <hr>
+    {%for n in recordlist %}
+
+                ID <input type="text" name="txtId"  value="{{n[0]}}" class="form-control">
+                <br>
+                Name <input type="text" name="txtName"  value="{{n[1]}}" class="form-control">
+                <br>
+                Email <input type="Email" name="txtEmail"  value="{{n[2]}}" class="form-control">
+                <br>
+                Mobile <input type="text" name="txtMobile" value="{{n[3]}}" class="form-control">
+                <br>
+                Designation <input type="text" name="txtDesignation"  value="{{n[4]}}" class="form-control">
+                <br>
+                Salary <input type="text" name="txtSalary" value="{{n[5]}}" class="form-control">
+
+                <br>
+                <button class="btn btn-primary">Update</button>
+
+                <a href="/admin_emp_delete?empid={{n[0]}}" class="btn btn-danger">Delete</a>
+ {% endfor %}
+    <hr>
+</form>
+
+
+
+
+
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-md-4">
+           <div class="sidebar-box">
+                <img src="/static/images/admin_icon.png" height="400px" width=" 380px" alt="">
+            <h2>Administration</h2>
+            </div>
+
+            <div class="sidebar-box">
+                <h5>CATEGORIES</h5>
+                <ul class="list-unstyled">
+                    <li>Employee Management</li>
+                    <li>Attendance</li>
+                    <li>Payroll</li>
+                    <li>Leave System</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    © 2026 HR ERP System | Designed by Ajit Yadav
+</footer>

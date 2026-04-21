@@ -1,0 +1,90 @@
+<style>
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+tr:hover {background-color: gray;}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+
+{% include 'admin_header.html' %}
+
+<!-- Main Section -->
+<div class="container main-section">
+    <div class="row">
+
+        <!-- Left Content -->
+        <div class="col-md-8">
+            <div class="welcome-box">
+<h2>Show Employee Details</h2>
+
+                <table>
+  <tr>
+      <th>Employee ID</th>
+      <th>Employee Name</th>
+      <th>Employee Email</th>
+      <th></th>
+       </tr>
+                    {% for n in recordlist %}
+                     <tr>
+                         <td>{{n[0]}}</td>
+                         <td>{{n[1]}}</td>
+                         <td>{{n[2]}}</td>
+                         <td><a href="/admin_emp_profile?empid={{n[0]}}" class="btn btn-success">View</a> </td>
+
+                      </tr>
+
+
+                    {% endfor %}
+
+</table>
+
+
+
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-md-4">
+            <div class="sidebar-box">
+                <img src="/static/images/admin_icon.png" height="400px" width=" 380px" alt="">
+            <h2>{{session['name']}}</h2>
+
+            </div>
+
+            <div class="sidebar-box">
+                <h5>CATEGORIES</h5>
+                <ul class="list-unstyled">
+                    <li>Employee Management</li>
+                    <li>Attendance</li>
+                    <li>Payroll</li>
+                    <li>Leave System</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    © 2026 HR ERP System | Designed by Ajit Yadav
+</footer>
+

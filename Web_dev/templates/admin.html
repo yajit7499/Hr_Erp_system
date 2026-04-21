@@ -1,0 +1,53 @@
+{% include 'header.html' %}
+
+<!-- Main Section -->
+<div class="container main-section">
+    <div class="row">
+
+        <!-- Left Content -->
+        <div class="col-md-8">
+            <div class="welcome-box">
+                <h2>ADMIN LOGIN</h2>
+
+<form action="/admindashboard" method="post">
+                <hr>
+                UserName <input type="text" name="txtUsername" class="form-control">
+                <br>
+                Password <input type="password" name="txtPassword" class="form-control">
+                  <font color="red">{{massage}}</font>
+                  <br>
+                <button class="btn btn-success">Login</button>
+
+                <hr>
+</form>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+                <div class="col-md-4">
+            <div class="sidebar-box">
+                <h5>NOTICE</h5>
+                <p>
+                    Mauris vitae nisl nec metus placerat. Phasellus dapibus semper consectetur.
+                </p>
+            </div>
+
+            <div class="sidebar-box">
+                <h5>CATEGORIES</h5>
+                <ul class="list-unstyled">
+                    <li>Employee Management</li>
+                    <li>Attendance</li>
+                    <li>Payroll</li>
+                    <li>Leave System</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    © 2026 HR ERP System | Designed by Ajit Yadav
+</footer>
+

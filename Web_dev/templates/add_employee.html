@@ -1,0 +1,61 @@
+{% include 'admin_header.html' %}
+
+<!-- Main Section -->
+<div class="container main-section">
+    <div class="row">
+
+        <!-- Left Content -->
+        <div class="col-md-8">
+            <div class="welcome-box">
+                <h2>Add New Employee!</h2>
+<form action="/save" method="post">
+    <hr>
+                ID <input type="text" name="txtId"  class="form-control">
+                <br>
+                Name <input type="text" name="txtName"  class="form-control">
+                <br>
+                Email <input type="Email" name="txtEmail"  class="form-control">
+                <br>
+                Mobile <input type="text" name="txtMobile"  class="form-control">
+                <br>
+                Designation <input type="text" name="txtDesignation"  class="form-control">
+                <br>
+                Salary <input type="text" name="txtSalary"  class="form-control">
+                <br>
+                <button class="btn btn-warning">Save</button>
+
+    <hr>
+</form>
+
+
+
+
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-md-4">
+           <div class="sidebar-box">
+                <img src="/static/images/admin_icon.png" height="400px" width=" 380px" alt="">
+            <h2>{{session['name']}}</h2>
+            </div>
+
+            <div class="sidebar-box">
+                <h5>CATEGORIES</h5>
+                <ul class="list-unstyled">
+                    <li>Employee Management</li>
+                    <li>Attendance</li>
+                    <li>Payroll</li>
+                    <li>Leave System</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    © 2026 HR ERP System | Designed by Ajit Yadav
+</footer>
