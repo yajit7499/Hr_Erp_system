@@ -52,6 +52,7 @@ Displays important information such as total employees and system stats.
 ### 6.4 Contact Module
 
 Allows users to send messages or queries.
+It also allows for a response submission.
 
 ## 7. Database Design
 
